@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #ff361c;
+  font-family: "Lucida Console", monospace;
+  
+}
+
+.form-wrapper {
+  display: flex;
+  position: relative;
+  width: 20em;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1em;
+  background-color: whitesmoke;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  padding: 5px;
+}
+
+.form {
+  display: block;
+  position: relative;
+  /* background-color: blue; */
+  /* width: 100%; */
+  
+}
+
+.form-field {
+  margin: 5px 0px;
+  font-size: 14px;
+}
+
+input {
+  
+}
