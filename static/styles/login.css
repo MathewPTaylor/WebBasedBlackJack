@@ -47,6 +47,7 @@ html, body {
   border-image-repeat: repeat;
   border-image-slice: 1;
   border-image-width: 10px;*/
+  
 }
 
 .form {
@@ -66,4 +67,3 @@ html, body {
   display: block;
   font-size: 0.85em;
   margin-top: 0.625em;
-}

@@ -10,12 +10,11 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 @app.route('/')
 def index():
-    return redirect(url_for("login"))
-    #return render_template("index.html")
+    return render_template("index.html")
+
 
 @app.route('/login')
 def login():
   return render_template("login.html")
-
 
 socketio.run(app, host='0.0.0.0', port=81, debug=True, use_reloader=False)
