@@ -10,7 +10,8 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return redirect(url_for("login"))
+    #return render_template("index.html")
 
 @app.route('/login')
 def login():
