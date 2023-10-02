@@ -1,0 +1,7 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #ff361c;
+  background-image: url("/static/img/login_background.jpeg");
+  font-family: "Lucida Console", monospace;
+}

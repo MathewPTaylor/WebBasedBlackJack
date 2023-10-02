@@ -8,7 +8,7 @@
     <meta name="author" content="Mat Taylor">
     <title>Blackjack Login</title>
     <link href="static/styles/login.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="static/img/logo_apple_touch_icon.png" type="image/x-icon">
+    <!--<link rel="icon" href="static/img/the_egg.ico" type="image/x-icon">-->
     <link rel="apple-touch-icon" href="static/img/logo_apple_touch_icon.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6e13a45840.js" crossorigin="anonymous"></script>
@@ -40,16 +40,17 @@
     <!--<div class="background">
       <img src="static/img/login_background.jpeg" alt="background" width="100%" height="100%">
     </div>-->
-    <div id="login-form-wrapper" class="form-wrapper"> 
-      <form id="login-form" class="form" method="POST">
+    <div id="signup-form-wrapper" class="form-wrapper"> 
+      <form id="signup-form" class="form" method="POST">
         <bold><h2>
-          Login
+          Signup
         </h2></bold>
   
-         <input id="login-form-username" class="form-field"name="username" value ="" type="text" placeholder="Username" required/><br>
-        <input id="login-form-password" class="form-field" name="password" value ="" type="password" placeholder="Password" required/><br>
-        <button id="login-button" class="form-field form-btn" name="loginBtn" type="submit">Login</button> <br>  
-        <a href="/signup" class="anchor">Dont have an account? Sign Up.</a>
+         <input id="signup-form-username" class="form-field"name="username" value ="" type="text" placeholder="Username" required/><br>
+        <input id="signup-form-password" class="form-field" name="password" value ="" type="password" placeholder="Password" required/><br>
+        <input id="signup-form-password_confirm" class="form-field" name="password" value ="" type="password" placeholder="Confirm Password" required/><br>
+        <button id="signup-button" class="form-field form-btn" name="loginBtn" type="submit">Sign Up</button> <br>  
+        <a href="/login" class="anchor">Already have an account? Login.</a>
       </form>
       <!-- <br> -->
       

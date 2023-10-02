@@ -4,7 +4,6 @@ html, body {
   background-color: #ff361c;
   background-image: url("/static/img/login_background.jpeg");
   font-family: "Lucida Console", monospace;
-  
 }
 
 .background {
@@ -43,10 +42,10 @@ html, body {
   padding: 5px;
   box-shadow: black 0px 0px 0.5em 0px;
   
-  /*border-image-source: url("/static/img/suits.png");
-  border-image-repeat: repeat;
-  border-image-slice: 1;
-  border-image-width: 10px;*/
+  border-image: url("/static/img/suits.png") 30 round;
+  /*border-image-repeat: repeat;*/
+  /*border-image-slice: 5;*/
+  /*border-image-width: 1em;*/
   
 }
 
@@ -60,10 +59,22 @@ html, body {
 
 .form-field {
   margin: 5px 0px;
-  font-size: 14px;
+  font-size: 1em;
+  width: 70%;
+  height: 1em;
+}
+
+.form-btn {
+  width: inherit;
+  height: inherit;
 }
 
 .anchor {
   display: block;
   font-size: 0.85em;
   margin-top: 0.625em;
+}
+
+.anchor:hover {
+  color: #333aff;
+}
