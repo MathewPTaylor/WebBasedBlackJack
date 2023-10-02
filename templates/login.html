@@ -4,37 +4,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Bootleg Cryptozoo: Bootleg version of Logan Paul's cryptozoo game">
+    <meta name="description" content="Blackjack online using flask framework">
     <meta name="author" content="Mat Taylor">
-    <title>Blackjack Login</title>
-    <link href="static/styles/login.css" rel="stylesheet" type="text/css">
-    <!--<link rel="icon" href="static/img/the_egg.ico" type="image/x-icon">-->
-    <!--<link rel="apple-touch-icon" href="static/img/the_egg.ico" type="image/x-icon">-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/6e13a45840.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
-  </head>
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Bootleg Cryptozoo: Bootleg version of Logan Paul's cryptozoo game">
-    <meta name="author" content="Mat Taylor">
-    <title>Bootleg CryptoZoo</title>
-    <link href="static/styles/login.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="static/img/the_egg.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="static/img/the_egg.ico" type="image/x-icon">
+    <title>Mum's Casino</title>
+    <link href="/static/styles/login.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6e13a45840.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
   </head>
   
   <body>
-    <script src="static/scripts/login.js"></script>
+    <script src="/static/scripts/login.js"></script>
     <div class="title">
-      
       <u><h1>Mum's Casino</h1></u>
     </div>
     <!--<div class="background">
@@ -42,11 +23,11 @@
     </div>-->
     <div id="login-form-wrapper" class="form-wrapper"> 
       <form id="login-form" class="form" method="POST">
-        <bold><h2>
+        <strong><h2>
           Login
-        </h2></bold>
+        </h2></strong>
   
-         <input id="login-form-username" class="form-field"name="username" value ="" type="text" placeholder="Username" required/><br>
+        <input id="login-form-username" class="form-field"name="username" value ="" type="text" placeholder="Username" required/><br>
         <input id="login-form-password" class="form-field" name="password" value ="" type="password" placeholder="Password" required/><br>
         <button id="login-button" class="form-field" name="loginBtn" type="submit">Login</button> <br>  
         <a href="/signup" class="anchor">Dont have an account? Sign Up.</a>
