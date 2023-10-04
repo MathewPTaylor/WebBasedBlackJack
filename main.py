@@ -2,11 +2,17 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 # from replit import db, clear
 import json
 from flask_socketio import SocketIO, emit
+import sqlite3
+from LogicPy.DBFuncs import *
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "suckyourmumontuesdays"
 
 socketio = SocketIO(app, cors_allowed_origins="*")
+
+
+dbobj = DBFuncs("Users.db")
+
 
 @app.route('/')
 def index():
