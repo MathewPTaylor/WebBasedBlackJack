@@ -9,12 +9,10 @@ class DBFuncs:
         self.fields = []
         self.tableName = ""
         self.primaryKey = ""
-
         # making db file
         conn = sqlite3.connect(self.dbFileName)
         conn.close()  
     def addTable(self, tablename):
-
         assert len(self.fields) > 0
 
         # connecting to the database
@@ -39,10 +37,12 @@ class DBFuncs:
         if datatype not in self.__class__.data_types:
             raise Exception("Invalid Data type ('{}')".format(datatype))
         else:
-            self.fields.append((fieldname, datatype))
-            if isprimarykey:
-                self.primaryKey = fieldname
-        
+            if fieldname not in [field[0] for field in self.fields]:
+              self.fields.append((fieldname, datatype))
+              if isprimarykey:
+                  self.primaryKey = fieldname
+            else:
+              print("Field already exists ('{}')".format(fieldname))
 
     def addRecord(self, *fieldvals):
         # connect to database

@@ -1,4 +1,28 @@
 [[package]]
+name = "bcrypt"
+version = "4.0.1"
+description = "Modern password hashing for your software and your servers"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+tests = ["pytest (>=3.2.1,!=3.3.0)"]
+typecheck = ["mypy"]
+
+[[package]]
+name = "bcrypt-flask"
+version = "1.0.2"
+description = "Brcrypt hashing for Flask."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+bcrypt = ">=3.1.1"
+Flask = "*"
+
+[[package]]
 name = "bidict"
 version = "0.22.1"
 description = "The bidirectional mapping library for Python."
@@ -819,9 +843,11 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "948bf8700a59424691c3db281e4e1579e156629f61e88f52918ec915c9afd9d8"
+content-hash = "c4230111b096045eeabf80e0aae2bda05cb800604c2488f4b64b0f331b41e773"
 
 [metadata.files]
+bcrypt = []
+bcrypt-flask = []
 bidict = []
 blinker = []
 cachecontrol = []
