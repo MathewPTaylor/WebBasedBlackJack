@@ -1,7 +1,7 @@
 from casinoapp import app
 from flask import render_template, request, redirect, url_for, flash, session
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index():
     return render_template("index.html")
 

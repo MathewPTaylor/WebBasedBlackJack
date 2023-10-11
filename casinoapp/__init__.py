@@ -3,7 +3,6 @@ from flask import Flask
 from flask_socketio import SocketIO
 from casinoapp.LogicPy.DBFuncs import DBFuncs
 
-
 # INITIALISING THE FLASK APP
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "suckyourmumontuesdays"
