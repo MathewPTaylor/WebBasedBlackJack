@@ -5,3 +5,21 @@ html, body {
   background-image: url("/static/img/login_background.jpeg");
   font-family: "Lucida Console", monospace;
 }
+
+.message-success {
+    display: block;
+    position: relative;
+    width: inherit;
+    height: 3em;
+    background: #33ee5577;
+    text-align: center;
+}
+
+.message-danger {
+    display: block;
+    position: relative;
+    width: inherit;
+    height: 3em;
+    background: #ee342377;
+    text-align: center;
+}

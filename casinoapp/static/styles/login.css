@@ -73,3 +73,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.is-invalid {
+    border-color: red;
+    border-radius: 0.1em;
+}
+
+.invalid-feedback {
+    font-size: 0.75em;
+    color: red;
+}

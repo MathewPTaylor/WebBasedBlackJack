@@ -1,47 +1,46 @@
-<!DOCTYPE html>
-<html>
+{% extends "formlayout.html" %}
+{% block content %}
+    {{ form.hidden_tag() }}
+    <fieldset>
+      <legend>{{ title }}</legend>
+      <div > <!-- Username -->
+        {{ form.username.label }}
+        {% if form.username.errors %}
+          {{ form.username(class="form-field is-invalid") }}
+          <div class="invalid-feedback">
+              {% for error in form.username.errors %}
+                <span style="color:red;"> {{ error }}</span>
+              {% endfor %}
+          </div>
+        {% else %}
+            {{ form.username(class="form-field") }}
+        {% endif %}
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Blackjack online using flask framework">
-    <meta name="author" content="Mat Taylor">
-    <title>Mum's Casino Login</title>
-    <link href="static/styles/login.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="static/img/logo_apple_touch_icon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="static/img/logo_apple_touch_icon.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/6e13a45840.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
-  </head>
+      </div>
+      <div> <!-- Password -->
+        {{ form.password.label }}
+        {% if form.password.errors %}
+          {{ form.password(class="form-field is-invalid") }}
+          <div class="invalid-feedback">
+              {% for error in form.password.errors %}
+                <span style="color:red;"> {{ error }}</span>
+              {% endfor %}
+          </div>
+        {% else %}
+            {{ form.password(class="form-field") }}
+        {% endif %}
 
-  <body>
-    <script src="/static/scripts/login.js"></script>
-    <div class="title">
-      <u><h1>Mum's Casino</h1></u>
+      </div>
+      <div> <!-- Remember -->
+        {{ form.remember.label }}
+        {{ form.remember }}
+      </div>
+
+    </fieldset>
+    <div> <!-- Submit -->
+        {{ form.submit }}
     </div>
-    <!--<div class="background">
-      <img src="static/img/login_background.jpeg" alt="background" width="100%" height="100%">
-    </div>-->
-    <div id="login-form-wrapper" class="form-wrapper"> 
-      <form id="login-form" class="form" method="POST">
-        <strong><h2>
-          Login
-        </h2></strong>
-  
-        <input id="login-form-username" class="form-field"name="username" value ="" type="text" placeholder="Username" required/><br>
-        <input id="login-form-password" class="form-field" name="password" value ="" type="password" placeholder="Password" required/><br>
-        <button id="login-button" class="form-field form-btn" name="loginBtn" type="submit">Login</button> <br>  
-        <span class="redirect-text">Dont have an account? <a href="/signup">Sign Up</a></span>
-      </form>
-      <!-- <br> -->
-      
-    
+    <div class="redirect-text">
+      Need an account? <a href="{{url_for('signup')}}">Sign up</a>
     </div>
-    
-
-  </body>
-   
-</html>
-
-  
+{% endblock content %}
