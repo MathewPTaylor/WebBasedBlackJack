@@ -1,8 +1,7 @@
 from flask import render_template, flash, url_for, redirect
-
 from casinoapp import app
 from casinoapp.forms import SignUpForm, LoginForm
-
+from casinoapp.models import User
 
 @app.route('/', methods=["GET", "POST"])
 def index():
