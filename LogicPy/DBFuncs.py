@@ -37,7 +37,7 @@ class DBFuncs:
 
     def addField(self, fieldname: str, datatype: str, isprimarykey: bool=False):
         if datatype not in self.__class__.data_types:
-            raise Exception("Invalid Data type ('{}')".format(datatype))
+            raise Exception("Invalid Data type <'{}'>".format(datatype))
         else:
             self.fields.append((fieldname, datatype))
             if isprimarykey:
@@ -89,7 +89,6 @@ class DBFuncs:
     def addTableName(self, tablename):
         self.tablename = tablename
 
-    @staticmethod
     def UpdateRecord(self, record):
       # Create the database or connect to it
       conn = sqlite3.connect(self.dbFileName)
@@ -154,6 +153,14 @@ class DBFuncs:
     def __FormatFieldParam(self) -> str:
         return "".join(f":{field[0]}, " for field in self.fields)[:-2]
 
+
+# EXAMPLE USE
+
+#myDb = DBFuncs(<db file name>)
+#myDb.addField(<field name>, <data type>, <isprimarykey (True, False)>) isprimarykey is defaulted to False
+
+#myDb.addTable("<table name>")
+#myDb.addRecord(<field values>)
 
 
 

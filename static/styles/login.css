@@ -20,7 +20,8 @@ html, body {
   display: flex;
   position: relative;
   width: 20em;
-  height: 250px;
+  height: auto;
+  padding: 5px 5px 4em 5px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -28,7 +29,6 @@ html, body {
   background-color: whitesmoke;
   justify-content: center;
   /* flex-wrap: wrap; */
-  padding: 5px;
   box-shadow: black 0px 0px 0.5em 0px;
   
   border-image: url("/static/img/suits.png") 30 round;
@@ -50,8 +50,11 @@ html, body {
 }
 
 input[type="text"], input[type="password"] {
+  font-size: 1.1em;
   height: 1.2em;
   max-height: 1.5em;
+  border: inset 0.15em;
+  border-radius: 0.2em;
 }
 
 .form-btn {
@@ -72,4 +75,11 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.visibility-toggle {
+  width: 1em;
+}
+.visibility-toggle:hover {
+  cursor: pointer;
 }

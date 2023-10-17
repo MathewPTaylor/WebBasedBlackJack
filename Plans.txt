@@ -1,0 +1,9 @@
+PLANS FOR BLACKJACK ON FLASK:
+1. make login/signup page (main page we'll figure out later)
+2. add security for the website (we'll use the actual flask_login module. watch on youtube for tutorials
+3. add a user system
+4. start making the game, prolly just gonna get it working before adding frontend pizazz
+  a. will add further functionality, like: insurance, splitting etc.
+
+5. add frontend pizazz
+6. might add other casino games to make a full casino website experience.

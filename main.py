@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import json
 from flask_socketio import SocketIO, emit
 import sqlite3
-from LogicPy.DBFuncs import *
+import LogicPy.DBFuncs as dbfuncs
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "suckyourmumontuesdays"
@@ -11,11 +11,20 @@ app.config["SECRET_KEY"] = "suckyourmumontuesdays"
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 
-dbobj = DBFuncs("Users.db")
+users = dbfuncs.DBFuncs("Users.db")
 
+users.addField("USERNAME", "text", True)
+users.addField("PASSWORD", "text")
+users.addField("BALANCE", "real")
 
-@app.route('/')
+#users.addTable("USERS")
+#dbobj.UpdateRecord(record)
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == "POST":
+      submit_type, username, password = request.form['submitBtn'], request.form['username'], request.form['password']
+      print(submit_type, username, password)
     return render_template("index.html")
 
 @app.route('/login')
