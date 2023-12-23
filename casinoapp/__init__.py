@@ -1,24 +1,18 @@
-# IMPORTING STUFF
 from flask import Flask
-from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 
-# from casinoapp.LogicPy.DBFuncs import DBFuncs
 
-# INITIALISING THE FLASK APP
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "suckyourmumontuesdays"
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///site.db'
+app.config['SECRET_KEY'] = "suckyourmumontuesdays"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///site.db"
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 db = SQLAlchemy(app)
-# bcrypt = Bcrypt(app)
-# login_manager = LoginManager(app)
-
-# with app.app_context():
-#     db.create_all()
-
-socketio = SocketIO(app, cors_allowed_origins="*")
+bcrypt = Bcrypt(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login' # name of the function for the login route
+login_manager.login_message_category = 'danger'
 
 from casinoapp import routes
-

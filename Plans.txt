@@ -1,0 +1,9 @@
+PLANS FOR CASINO WEB APP:
+
+Overall:
+1.
+
+
+Current:
+1. Finish designing home page on Paint (file prolly somewhere in 'Mathew' folder)
+2. finish profile with the dropdown, section

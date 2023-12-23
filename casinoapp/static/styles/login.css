@@ -20,43 +20,59 @@ html, body {
   display: flex;
   position: relative;
   width: 20em;
-  height: 250px;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 1em;
+  border-radius: 0.6em;
   background-color: whitesmoke;
   justify-content: center;
-  /* flex-wrap: wrap; */
-  padding: 5px;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  padding-bottom: 1em;
   box-shadow: black 0px 0px 0.5em 0px;
-  
-  border-image: url("/static/img/suits.png") 30 round;
-  /*border-image-repeat: repeat;*/
-  /*border-image-slice: 5;*/
-  /*border-image-width: 1em;*/ 
 }
 
 .form {
   display: block;
   position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 1em 0em 1em;
 }
 
 .form-field {
   margin: 5px 0px;
-  font-size: 1rem;
-  width: 70%;
-  height: 1em;
+  font-size: 1.2rem;
+  width: 100%;
+  transition: 0.2s ease;
 }
 
-input[type="text"], input[type="password"] {
-  height: 1.2em;
-  max-height: 1.5em;
+.input-field{
+  height: 2em;
+  width: 99%;
+  /* font-size: 1.2em; */
+  border-radius: 0.1em;
+  border: solid 1px black;
+  background-color: #aaa;
 }
 
-.form-btn {
-  width: inherit;
-  height: inherit;
+.input-field:focus{
+    background-color: lightgrey;
+}
+
+.form-submit {
+  border: none;
+  font-weight: bold;
+  background-color: red;
+  height: 1.6em;
+  border-radius: 0.1em;
+  color: whitesmoke;
+}
+
+.form-submit:hover {
+  cursor: pointer;
+  background-color: #d00;
 }
 
 .redirect-text {
@@ -64,6 +80,7 @@ input[type="text"], input[type="password"] {
   font-size: 0.85em;
   margin-top: 0.625em;
   text-decoration: none;
+  margin-left: 5px;
 }
 
 a {
@@ -75,11 +92,49 @@ a:hover {
 }
 
 .is-invalid {
-    border-color: red;
-    border-radius: 0.1em;
+    border: solid 1px red;
+}
+
+.is-invalid:focus-visible{
+    outline-color: red;
 }
 
 .invalid-feedback {
     font-size: 0.75em;
     color: red;
+}
+
+.danger-popup {
+  display: block;
+  /* width: 375px; */
+  height: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ff2222;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  /* font-family: sans-serif; */
+  color: #eee;
+  border-radius: 5px;
+}
+
+.success-popup {
+  display: block;
+  /* width: 375px; */
+  height: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #239923;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  /* font-family: sans-serif; */
+  color: #eee;
+  border-radius: 5px;
+}
+
+.popup-text {
+  /* font-size: 2em; */
+  color: whitesmoke;
 }
