@@ -6,6 +6,11 @@ html, body {
   font-family: "Lucida Console", monospace;
 }
 
+:root {
+    --navbarcol: #ee0302;
+    --bgcol: #ff361c;
+}
+
 .home-bg {
   position: absolute;
   width: 100%;
@@ -35,8 +40,20 @@ html, body {
   background-color: #dd0302;
 }
 
-.nav-right {
+.float-right {
     float: right;
+}
+
+.abs-right-1 {
+    right: 1em;
+}
+
+.abs-left-1 {
+    left: 1em;
+}
+
+.fw-bolder {
+    font-weight: bolder;
 }
 
 .nav-link {
@@ -50,10 +67,28 @@ html, body {
     background-color: #ee3344;
 }
 
+.nav-info {
+    color: whitesmoke;
+    font-size: 0.9em;
+    font-weight: bold;
+    align-items: center;
+    padding: 0;
+    margin: 0em 0.5em;
+}
+.nav-info:hover {
+    background-color: unset;
+}
+
 #nav-user-profile {
     /* display: block; */
     position: relative;
-    padding-right: 0.5em;
+    padding-left: 0.3em;
+    /* padding-right: 0.5em; */
+}
+
+/* alternative */
+#nav-user-profile:hover {
+    /* background-color: #ee0302; */
 }
 
 #nav-up-btn {
@@ -62,8 +97,19 @@ html, body {
     z-index: 5;
     height: 100%;
     align-items: center;
+    /* background-color: #ee0302; */
 }
 
+#nav-up-btn:hover {
+    background-color: #dd0302;
+
+    /* alternative */
+    /* background-color: #ee0302; */
+}
+
+-info {
+
+}
 .user-pfp {
     height: 90%;
     border-radius: 50%;
@@ -104,4 +150,156 @@ html, body {
 .dropdown-link:hover {
     background-color: #bb0302;
     border: solid 1px #bb0302;
+}
+
+.sliding-promo-wrapper {
+    display: flex;
+    width: 100%;
+    height: 25rem;
+    align-items: center;
+}
+
+
+
+.sliding-promo-item {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    /* justify-content: center; */
+    /* padding: 0em 5em; */
+}
+
+.sliding-promo-rails {
+    transition: 1s ease;
+    display: flex;
+    width: inherit;
+    height: inherit;
+    /* transform: translateX(-50%); */
+}
+
+.sliding-promo-content-wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background: linear-gradient(85deg, black, rgba(100, 20,20, 0.4), transparent);
+}
+
+.sliding-promo-content {
+    color: whitesmoke;
+    /* font-family: Inter; */
+    font-size: 5.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0em 5rem;
+}
+
+.sp-arrow {
+    position: absolute;
+    z-index: 3;
+    transition: 0.1s ease;
+}
+
+.sp-arrow:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.sp-anchor-btn {
+    font-size: 0.45em;
+    text-decoration: none;
+    padding: 1rem;
+    border: solid 0.4rem var(--bgcol);
+    border-radius: 1.5em;
+    color: whitesmoke;
+    background-color: var(--navbarcol);
+}
+
+.sp-anchor-btn:hover {
+    font-size: 0.495em;
+    padding: 1.1rem;
+}
+
+.latest-winners {
+    width: 100%;
+    height: 3rem;
+    background: #3f3a3a;
+}
+
+.latest-winners-title {
+    display: flex;
+    position: absolute;
+    width: 22.75rem;
+    height: inherit;
+    z-index: 3;
+}
+.latest-winners-text {
+    display: flex;
+    width: 20.3125rem;
+    height: 100%;
+    /* font-family: Jockey One; */
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #DE3907;
+    text-align: center;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrolling-text {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    word-spacing: -0.35rem;
+}
+
+.lw-standout-text {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.lw-item-info {
+    display: inline-block;
+    list-style: none;
+    margin: 0em 0.5em;
+}
+
+.news-wrapper {
+    padding: 2em;
+}
+
+.news-title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.news-feed {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.story-block {
+    width: 18rem;
+    height: 18.875rem;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    background-color: whitesmoke;
+}
+
+.story-cover-img {
+    width: 100%;
+    height: 75%;
+}
+
+.story-headline {
+    width: 100%;
+    height: 25%;
+    background: whitesmoke;
 }

@@ -13,7 +13,14 @@ html, body {
   transform: translateX(-50%);
   font-family: "Brush Script MT", cursive;
   font-size: 2em;
+  text-decoration: none;
   color: white;
+}
+
+
+
+.title:hover {
+    cursor: pointer;
 }
 
 .form-wrapper {
@@ -97,6 +104,19 @@ a:hover {
 
 .is-invalid:focus-visible{
     outline-color: red;
+}
+
+.password-toggle-btn {
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    right: -3%;
+    top: 56%;
+    /* background: darkgrey; */
+    height: 1.5em;
+    /* margin: 0.1em; */
+    padding: 0.1em 0.2em;
+    font-size: 0.9em;
 }
 
 .invalid-feedback {

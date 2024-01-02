@@ -74,7 +74,6 @@ def account():
     return render_template("account.html", title="Account", user=current_user)
 
 
-
 @app.route('/forgotpassword', methods=['GET', 'POST'])
 def forgot_password():
   form = ForgotPasswordForm()
